@@ -1,6 +1,26 @@
-# topics: ETL/ELT
-## Business problem 
-what problem this solve?
-ELT is mostly use and demand for ADLS for data flow than laod into warehouse
-ELT is cheap and scalable storage
- 
+# Data-Engineer-Course-
+
+Topics: 
+Python/SQL
+kafka
+Apache Spark
+Data Pipline
+Databrick
+Data warehouse
+snkowflake
+delta lake
+data lakehouse
+Cloud: AWS, ADF, BIGQUERY
+ETL/ELT
+Docker
+Kubernet
+Orchestration
+API
+Star schema
+Batch processing
+Streaming pipeline
+Airflow
+Data modeling
+Data Archetecture
+Data ops
+Hadoop
