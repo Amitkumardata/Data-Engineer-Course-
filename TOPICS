@@ -1,0 +1,6 @@
+# topics: ETL/ELT
+## Business problem 
+what problem this solve?
+ELT is mostly use and demand for ADLS for data flow than laod into warehouse
+ELT is cheap and scalable storage
+ 
