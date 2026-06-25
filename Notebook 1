@@ -1,0 +1,131 @@
+# Proposed Data Lake structure
+Adls://Company data lake/
+raw/
+ecommerce/
+   orders/load_year_2026/load_month_06/load_day_26/orders_2026_06_26.csv
+   customer/load_year_2026/laod_month_06/load_day_26/customers_2026_06_26.csv
+   product/load_year_2026/laod_month_06/load_day_26/products_2026_06_26.csv
+   Payment/load_year_2026/laod_month_06/load_day_26/product_2026_06_26.csv
+   clickstream/load_year_2026/laod_month_06/load_day_26/clickstream_2026_06_26.csv
+
+Beonze/
+   ecommerce/
+   customer_delta/
+   product_delta/
+   payment_delta/
+   clickstream_delta
+
+silver/
+ecommerce/
+customers_clean/
+orders_clean/
+products_clean/
+payment_clean/
+web_session
+
+Gold/
+ecommerce/Start analysis
+daily_sales_summary/
+sales_by_region/
+customer_purchase_summary/
+product_performance/
+payment_sucess_rate/
+
+Layer  Explanation
+raw layer
+store sourse data exactly as received
+
+Purpose:
+. Preserve original files
+. support audit and troubshooting
+. Allow reprocessing if business rules change
+
+Recommendation format 
+. CSV for source file export 
+. Json for API or event data
+. Keep the orignal source format
+
+# Bronze layer
+stores ingestion data with light technial cleanup
+typical change
+. Add ingestion timestamp
+. add source file name 
+. convert raw files into delta or parquet
+
+# Silver layer
+Store cleaned and standardized data
+
+typical change
+. Remove duplicates
+. fix data type
+. handle nulls 
+. join related dataset
+. apply basic business rules
+
+Gold layer
+store bsuiness-ready dataset for reporting and analytics
+
+Example: gold /ecommerce/daily_summary
+ typical change
+. data analytics
+. Power bi devlopers
+. business stakeholders
+
+PIPELINE FLOW :-
+
+1.Source system
+2. ADF or fabric data factory ingestion
+3. ADLS row layer
+4. databricks/pyspark conversion to bronze
+5. Cleaning and join into silver
+6. Aggregation and KPIs into gold
+7. Power bi /analytics consumption
+
+Partitioning strategy:
+Load_year/load_month/load_day
+
+reason:
+tracks when data arrived
+makes daily reload easier
+help with audit and triublesooting
+
+Silver and gold layers:
+business_date, order_date,event_date or report_month
+
+Access control design:
+Row: Data eng and platform admin can have access
+Bronze: Data eng
+silver: data eng anf selected analytsis
+gold: Analytst , BI developer and approved bsuiness user
+
+
+Interview Notes:
+1. Why do we separate raw, bronze, silver, and gold?
+We separate layers to organize data by quality and purpose. Raw stores original data, 
+bronze stores ingested data, silver stores cleaned data, and gold stores business-ready data for reporting.
+
+TOMMOROW HOMEWORK:
+
+Rebuild Task
+Rebuild this design from scratch for a banking company with these sources:
+Accounts
+Customers
+Transactions
+Loans
+Credit card payments
+Create folder paths for:
+Raw
+Bronze
+Silver
+Gold
+Then write a short explanation of why you chose your structure.
+
+
+
+
+
+
+
+
+
+
