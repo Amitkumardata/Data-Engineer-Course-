@@ -20,5 +20,3 @@ GOAL: Design a practical data lake folder structure using raw , bronze, silver a
  . Cleaned datasets for analytics
  . Business ready gold output
  . Simple access control by layer
-
- 
