@@ -1,7 +1,7 @@
 # Proposed Data Lake structure
 Adls://Company data lake/
 raw/
-ecommerce/
+e-commerce/
    orders/load_year_2026/load_month_06/load_day_26/orders_2026_06_26.csv
    customer/load_year_2026/laod_month_06/load_day_26/customers_2026_06_26.csv
    product/load_year_2026/laod_month_06/load_day_26/products_2026_06_26.csv
@@ -63,7 +63,7 @@ typical change
 . apply basic business rules
 
 Gold layer
-store bsuiness-ready dataset for reporting and analytics
+store Business-ready dataset for reporting and analytics
 
 Example: gold /ecommerce/daily_summary
  typical change
@@ -87,7 +87,7 @@ Load_year/load_month/load_day
 reason:
 tracks when data arrived
 makes daily reload easier
-help with audit and triublesooting
+help with audit and Trabulshooting
 
 Silver and gold layers:
 business_date, order_date,event_date or report_month
@@ -108,17 +108,42 @@ TOMMOROW HOMEWORK:
 
 Rebuild Task
 Rebuild this design from scratch for a banking company with these sources:
-Accounts
-Customers
-Transactions
-Loans
-Credit card payments
+Banking
+load_Accounts/load_Customers/load_Transactions/load_Loans/load_Credit card payments/banking.csv
+
 Create folder paths for:
-Raw
-Bronze
-Silver
-Gold
+Raw layer moved into (ADLS Gen2):
+
+Bronze/customer_delta/
+transaction_delta/
+loans_delta/
+credit_delta/
+payment_delta/
+banking_delta/
+
+
+Silver/customer/transaction/loans/credit/payment/banking_Cleaned
+duplicates
+handle nulls
+missing
+joined both table
+check business change
+aggregation
+
+Gold/banking: ready for bsuiness users
+transaction_summary
+key/metrics
+reporting/analytics
+ML model for prediction
+power BI developers
+
 Then write a short explanation of why you chose your structure.
+row layer keep the exactly the same dataset when they arrive without touching any layers
+then move into ADLS gen2 to store the raw data 
+Bronze layer keep the as it is just lighting cleaning but not much for business ready data
+Silver /ingestion layer As data is complex and messy business do not trust for business uses
+cleaning the data is more important 
+gold received the cleaned data and ready to use for analytics , repoting , dashboard , 
 
 
 
