@@ -1,0 +1,86 @@
+Business Problem
+Companies received data from many places:
+. SQL Database 
+. APIs
+. CSV/Excel
+. Saas system
+. Cloud storage
+
+ Data Engneer need a tool to move this data into the data lake on a schedule
+ monitoe the process and handle failure
+
+ What This Tool Does:
+ Azure Data factory and fabric data factory are used for data integeration and orcehstration
+
+ Its commanly used to:
+ . Copy data from source to distination
+ . schedule daily or hourly pipeline
+ . Pass parameters into reusable pipeline
+ . Trigger databricks notebooks or stored procedures 
+ . Monitor pipeline success and failure
+
+ Activity:
+ an activity is one task inside a pipeline
+Example:
+. Copy activity
+. Lookup activity
+. if condition
+. foreach
+. web activity
+. notebook activity
+
+Linked Service:
+
+A Linked service is a connection details to a system
+example:
+Azure sql database conection
+ADLS gen2 connection
+rest API connection
+databricks connection
+
+Dataset: A dataset points to the actual data location or structure
+Example: 
+sql table: dbo.orders
+ADLS file path: raw/ecommerce/orders/2026/26/06/orders.csv
+
+Trigger: A trigger start a pipeline
+Example: 
+Run daily at 1pm
+run hourly
+run when a file arrrive
+
+Example pipelinedesign:
+
+source:1. Azure SQL orders table
+2. ADF copy activity
+3. ADLS raw/orders/load_date-2026-06-26
+4. Validation activity
+5. Databricks notebook
+6. Silver and gold delta tables
+
+
+Rebuild Task:
+
+Design a Data Factory pipeline for this scenario:
+Source: SQL Server orders and customers tables
+Target: ADLS raw layer
+Schedule: Daily at 1 AM
+Next step: Trigger Databricks notebook
+Failure handling: Send alert
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
