@@ -1,0 +1,35 @@
+# Sales Star Schema
+
+## Problem Statement
+A retail company wants faster reporting on sales revenue by customer, product, store, and date.
+
+## Objective
+Design a star schema that supports analytical queries such as revenue by month, product category, customer, and region.
+
+## Architecture
+
+Raw OLTP Data -> Dimension Tables + Fact Table -> Analytics Queries
+
+## Schema Design
+
+### Fact Table
+- fact_sales
+
+### Dimension Tables
+- dim_customer
+- dim_product
+- dim_date
+- dim_store
+
+## Sample Business Questions
+1. What is monthly revenue?
+2. Which product category generates the most revenue?
+3. Who are the highest-value customers?
+4. Which region sells the most?
+
+## What I Learned
+- A fact table stores measurable business events.
+- Dimension tables describe those events.
+- Star schemas make analytics easier.
+- Denormalization can improve reporting performance.
+- OLTP and OLAP systems are designed for different purposes.
