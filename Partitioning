@@ -1,0 +1,28 @@
+# Partitioned Event Logs
+
+## Problem Statement
+A web application generates many user events. Querying one huge event table becomes slow as data grows.
+
+## Objective
+Design a PostgreSQL event log table partitioned by month to improve query performance for date-based analytics.
+
+## What Is Partitioning?
+Partitioning splits one large logical table into smaller physical tables.
+
+## Why Partition by Date?
+Most event analytics queries filter by time, such as daily, monthly, or quarterly reports.
+
+## Architecture
+Application Events -> Partitioned PostgreSQL Table -> Monthly Partitions -> Analytics Queries
+
+## Queries Included
+- Events by type
+- Purchases by country
+- Daily active users
+- Monthly event counts
+
+## What I Learned
+- Large tables can be split into partitions.
+- Date partitioning is useful for event logs.
+- Partition pruning helps skip irrelevant data.
+- Partitioning improves performance when queries filter by the partition key.
