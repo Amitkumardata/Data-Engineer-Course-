@@ -10,7 +10,7 @@ Data warehouse
 snkowflake
 delta lake
 data lakehouse
-Cloud: AWS, ADF, BIGQUERY
+Cloud: AWS, ADF, BIGQUERY, Snowflake
 ETL/ELT
 Docker
 Kubernet
@@ -25,3 +25,7 @@ Data Archetecture
 Data ops
 Hadoop
 Partition by
+Start Schema 
+OLTP / OLAP
+CI/CD
+Copy Activity
