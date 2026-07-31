@@ -1,4 +1,32 @@
 # PySpark Sales Cleaning Project
 
 ## problem statement
-A sales dataset 
+A sales dataset contains messy records such as duplicates rows, missing values. invalid quantity and icnonsistant categroy names
+
+## OBJECTIVE:
+use pyspark to clean raw sales data and calculate revenue by product category
+
+## tools used:
+pyspark
+python
+csv
+parquet
+
+# pipeline steps
+1. read raw csv data
+2. chheck the data types
+3. clean the data by remove dup,fillna,calulate revenue,change the data type,filter invalid quantity 
+standarize category names
+4. convert date types
+5 save the clean dataset 
+6. write the process output as parquet
+
+## Output: The pipline creates:
+clean sales data
+revenue by category summary
+
+# what I learned:
+how to create a basic pyspark ETL pipeline
+how to clean messy data
+convert date data type from txt to date type
+how to use common pyspark transformation
