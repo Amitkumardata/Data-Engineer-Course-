@@ -1,0 +1,15 @@
+{
+	"name": "adf-yourinitials-learning",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3b05530e-e61b-4853-95dc-1b7c4daffc43",
+		"tenantId": "b8de16d5-fe56-4dc7-8a1d-d8fd6bf20f50"
+	}
+}
