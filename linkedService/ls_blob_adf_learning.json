@@ -1,0 +1,11 @@
+{
+	"name": "ls_blob_adf_learning",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://styourinitialsadf01.blob.core.windows.net/",
+			"accountKind": "StorageV2"
+		}
+	}
+}
