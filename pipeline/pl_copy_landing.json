@@ -1,0 +1,29 @@
+{
+	"name": "pl_copy_landing",
+	"properties": {
+		"activities": [
+			{
+				"name": "cp_customers_landing_to_raw",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"enableStaging": false
+				}
+			}
+		],
+		"parameters": {
+			"pl_copy_landing_to_raw": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
