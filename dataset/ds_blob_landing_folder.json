@@ -1,0 +1,17 @@
+{
+	"name": "ds_blob_landing_folder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_adf_learning",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "landing"
+			}
+		}
+	}
+}
