@@ -89,6 +89,26 @@
 						"type": "BinaryReadSettings"
 					}
 				}
+			},
+			{
+				"name": "fe_copy_each_file",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "gm_list_landing_files",
+						"dependencyConditions": [
+							"Skipped"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('gm_list_landing_files').output.childItems",
+						"type": "Expression"
+					},
+					"isSequential": true
+				}
 			}
 		],
 		"parameters": {
