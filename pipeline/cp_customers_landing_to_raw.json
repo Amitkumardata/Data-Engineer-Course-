@@ -184,7 +184,7 @@
 				}
 			},
 			{
-				"name": "Set variable1",
+				"name": "v_pipeline_message",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"policy": {
