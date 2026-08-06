@@ -15,7 +15,7 @@
 				],
 				"policy": {
 					"timeout": "0.12:00:00",
-					"retry": 0,
+					"retry": 2,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
@@ -191,7 +191,11 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "v_pipeline_message",
+					"value": "No files found in the landing container. Pipeline completed without copying data."
+				}
 			},
 			{
 				"name": "if_landing_has_files",
