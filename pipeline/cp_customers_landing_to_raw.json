@@ -209,7 +209,23 @@
 					"expression": {
 						"value": "@greater(length(activity('gm_list_landing_files').output.childItems), 0)",
 						"type": "Expression"
-					}
+					},
+					"ifFalseActivities": [
+						{
+							"name": "sv_no_files_found",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "v_pipeline_message",
+								"value": "No files found in the landing container. Pipeline completed without copying data."
+							}
+						}
+					]
 				}
 			}
 		],
