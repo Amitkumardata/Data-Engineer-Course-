@@ -192,6 +192,25 @@
 					"secureInput": false
 				},
 				"userProperties": []
+			},
+			{
+				"name": "if_landing_has_files",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "gm_list_landing_files",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@greater(length(activity('gm_list_landing_files').output.childItems), 0)",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
