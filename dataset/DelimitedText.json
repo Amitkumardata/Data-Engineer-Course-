@@ -9,6 +9,10 @@
 			"file_name": {
 				"type": "string",
 				"defaultValue": "file_name"
+			},
+			"folder_name": {
+				"type": "string",
+				"defaultValue": "folder_name"
 			}
 		},
 		"annotations": [],
