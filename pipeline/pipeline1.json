@@ -137,7 +137,13 @@
 							"outputs": [
 								{
 									"referenceName": "DelimitedText",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name": {
+											"value": "@item().file_name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
