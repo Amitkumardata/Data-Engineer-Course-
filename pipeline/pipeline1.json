@@ -108,7 +108,7 @@
 									"referenceName": "DelimitedText1",
 									"type": "DatasetReference",
 									"parameters": {
-										"": {
+										"relative_git_file_url": {
 											"value": "@item().relative_git_file_url\n",
 											"type": "Expression"
 										}
