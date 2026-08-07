@@ -106,7 +106,13 @@
 							"inputs": [
 								{
 									"referenceName": "DelimitedText1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"": {
+											"value": "@item().relative_git_file_url\n",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
