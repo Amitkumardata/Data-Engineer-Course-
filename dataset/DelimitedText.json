@@ -20,7 +20,10 @@
 					"value": "@dataset().file_name",
 					"type": "Expression"
 				},
-				"fileSystem": "@item().folder_name"
+				"fileSystem": {
+					"value": "folder_name",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
