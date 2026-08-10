@@ -81,8 +81,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_blob_landing_folder",
-						"type": "DatasetReference"
+						"referenceName": "ds_blob_customers_source",
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "@item().name"
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -93,7 +96,7 @@
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "BinaryReadSettings"
+						"type": "DelimitedTextReadSettings"
 					}
 				}
 			},
