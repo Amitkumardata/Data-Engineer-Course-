@@ -57,7 +57,10 @@
 				"inputs": [
 					{
 						"referenceName": "ds_blob_customers_source",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "@item().name"
+						}
 					}
 				],
 				"outputs": [
