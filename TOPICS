@@ -2,7 +2,6 @@
 
 Topics: 
 Python/SQL
-kafka
 Apache Spark
 Data Pipline
 Databrick
@@ -11,21 +10,19 @@ snkowflake
 delta lake
 data lakehouse
 Cloud: AWS, ADF, BIGQUERY, Snowflake
-ETL/ELT
-Docker
-Kubernet
+ETL/ELT Pipeline
 Orchestration
-API
+API/json
 Star schema
 Batch processing
 Streaming pipeline
 Airflow
 Data modeling
-Data Archetecture
-Data ops
-Hadoop
+Medallian Archetecture
 Partition by
+shuffle
+coalese
 Start Schema 
-OLTP / OLAP
-CI/CD
 Copy Activity
+synapse Analytics
+databricks 
