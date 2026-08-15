@@ -5,12 +5,24 @@
 			"referenceName": "ls_blob_adf_learning",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"p_folder": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "landing"
+				"folderPath": {
+					"value": "@dataset().p_folder",
+					"type": "Expression"
+				},
+				"container": {
+					"value": "p_folder",
+					"type": "Expression"
+				}
 			}
 		}
 	}
