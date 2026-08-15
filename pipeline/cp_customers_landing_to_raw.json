@@ -90,7 +90,9 @@
 							"p_folder": {
 								"value": "@concat('incremental/load_date=', pipeline().parameters.p_load_date)",
 								"type": "Expression"
-							}
+							},
+							"p_container": "incremental1",
+							"p_file": "customers.csv"
 						}
 					},
 					"fieldList": [
@@ -136,6 +138,7 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
+							"userProperties": [],
 							"typeProperties": {
 								"source": {
 									"type": "BinarySource",
@@ -148,14 +151,9 @@
 									}
 								},
 								"sink": {
-									"type": "DelimitedTextSink",
+									"type": "BinarySink",
 									"storeSettings": {
 										"type": "AzureBlobStorageWriteSettings"
-									},
-									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
 									}
 								},
 								"enableStaging": false
@@ -182,18 +180,11 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_blob_customers_sink",
+									"referenceName": "ds_blob_landing_folder",
 									"type": "DatasetReference",
 									"parameters": {
-										"p_container": "raw",
-										"p_folder": {
-											"value": "@concat('source=manual/load_date=', pipeline().parameters.p_load_date)",
-											"type": "Expression"
-										},
-										"p_file": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
+										"p_container": "incremental1",
+										"p_file": "customers.csv"
 									}
 								}
 							]
