@@ -8,7 +8,7 @@
 		"parameters": {
 			"p_container": {
 				"type": "string",
-				"defaultValue": "landing"
+				"defaultValue": "raw"
 			},
 			"p_folder": {
 				"type": "string",

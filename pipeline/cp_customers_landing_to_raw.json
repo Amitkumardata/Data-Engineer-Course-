@@ -163,7 +163,10 @@
 							"inputs": [
 								{
 									"referenceName": "ds_blob_landing_folder",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"p_file": "customers.csv"
+									}
 								}
 							],
 							"outputs": [
