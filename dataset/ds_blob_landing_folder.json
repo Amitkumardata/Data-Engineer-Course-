@@ -8,6 +8,14 @@
 		"parameters": {
 			"p_folder": {
 				"type": "string"
+			},
+			"p_container": {
+				"type": "string",
+				"defaultValue": "incremental1"
+			},
+			"p_file": {
+				"type": "string",
+				"defaultValue": "customers.csv"
 			}
 		},
 		"annotations": [],
