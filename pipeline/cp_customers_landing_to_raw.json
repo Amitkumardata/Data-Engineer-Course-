@@ -59,7 +59,7 @@
 						"referenceName": "ds_blob_customers_source",
 						"type": "DatasetReference",
 						"parameters": {
-							"fileName": "@item().name"
+							"landing": "@item().name"
 						}
 					}
 				],
@@ -136,17 +136,15 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "DelimitedTextSource",
+									"type": "BinarySource",
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
-										"recursive": true,
-										"enablePartitionDiscovery": false
+										"recursive": true
 									},
 									"formatSettings": {
-										"type": "DelimitedTextReadSettings"
+										"type": "BinaryReadSettings"
 									}
 								},
 								"sink": {
@@ -160,26 +158,12 @@
 										"fileExtension": ".txt"
 									}
 								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
+								"enableStaging": false
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_blob_customers_source",
-									"type": "DatasetReference",
-									"parameters": {
-										"fileName": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "ds_blob_landing_folder",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
