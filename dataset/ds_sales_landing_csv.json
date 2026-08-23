@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "customer1.csv",
-				"container": "incremental1"
+				"fileName": "customer2.csv",
+				"container": "incremental2"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
