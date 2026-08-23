@@ -6,12 +6,6 @@
 		"pipelines": [
 			{
 				"pipelineReference": {
-					"referenceName": "pipeline1",
-					"type": "PipelineReference"
-				}
-			},
-			{
-				"pipelineReference": {
 					"referenceName": "cp_customers_landing_to_raw",
 					"type": "PipelineReference"
 				}
