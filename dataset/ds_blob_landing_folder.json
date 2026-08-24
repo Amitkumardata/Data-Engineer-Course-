@@ -23,6 +23,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "sales_bengaluru_2026-08-19.csv",
 				"folderPath": {
 					"value": "@dataset().p_folder",
 					"type": "Expression"
