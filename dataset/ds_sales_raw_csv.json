@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "mumbai.csv",
-				"container": "landing"
+				"container": "raw"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
