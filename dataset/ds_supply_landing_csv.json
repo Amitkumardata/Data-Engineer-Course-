@@ -1,0 +1,21 @@
+{
+	"name": "ds_supply_landing_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_adf_learning",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
